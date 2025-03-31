@@ -1,7 +1,7 @@
 import os, json, numpy as np, httpx
 from request_context import current_request_var
 
-api_key = "Io4hBJXa8XEOT6cUwFHa2RcPhVLjCF8zfQBLTl3e_q2XJlI10N-P_m72gA" 
+api_key = "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjEwMDI4NzlAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.yc57Cs_IoePqh9QLKvhf8G4_eFuxbgibh4kZzKUeTSU" 
 
 def execute(question: str, parameter):
     request = current_request_var.get()
