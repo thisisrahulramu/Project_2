@@ -2,14 +2,13 @@ import os, json
 
 def execute(question: str, parameter):
     return """
-    Version:          Code 1.84.0 (d037ac076cee195194f93ce6fe2bdfe2969cc82d, 2023-11-01T11:30:19.406Z)
-OS Version:       Darwin arm64 24.2.0
-CPUs:             Apple M1 (8 x 24)
-Memory (System):  8.00GB (0.19GB free)
-Load (avg):       2, 4, 4
+    Version:          Code 1.96.2 (fabdb6a30b49f79a7aba0f2ad9df9b399473380f, 2024-12-19T10:22:47.216Z)
+OS Version:       Windows_NT x64 10.0.26100
+CPUs:             12th Gen Intel(R) Core(TM) i5-1235U (12 x 2496)
+Memory (System):  15.71GB (3.98GB free)
 VM:               0%
 Screen Reader:    no
-Process Argv:     --crash-reporter-id b19f4b03-5559-4f79-b9c1-614b4ef68f02
+Process Argv:     --crash-reporter-id e8a306f4-9d75-4381-9266-c8a6aa94cf0e
 GPU Status:       2d_canvas:                              enabled
                   canvas_oop_rasterization:               enabled_on
                   direct_rendering_display_compositor:    disabled_off_ok
@@ -18,32 +17,35 @@ GPU Status:       2d_canvas:                              enabled
                   opengl:                                 enabled_on
                   rasterization:                          enabled
                   raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
                   video_decode:                           enabled
                   video_encode:                           enabled
                   vulkan:                                 disabled_off
                   webgl:                                  enabled
                   webgl2:                                 enabled
                   webgpu:                                 enabled
+                  webnn:                                  disabled_off
 
 CPU %   Mem MB     PID  Process
-    1      205     890  code main
-    1       66     897     gpu-process
-    0       25     898     utility-network-service
-    0       49     916  ptyHost
-    0        0    1234       /bin/zsh -il
-    1        0    1351         bash /usr/local/bin/code -s
-   12       49    1360           electron-nodejs (/private/var/folders/yf/4k07bgld22x8gr963ccp2kh40000gq/T/AppTranslocation/079B612B-0DF6-4130-A64F-629190F3F62F/d/Visual Studio Code.app/Contents/MacOS/Electron /private/var/folders/yf/4k07bgld22x8gr963ccp2kh40000gq/T/AppTranslocation/079B612B-0DF6-4130-A64F-629190F3F62F/d/Visual Studio Code.app/Contents/Resources/app/out/cli.js --ms-enable-electron-run-as-node -s)
-    0        0    1255       /bin/zsh
-    0       66     917  shared-process
-    3      295    1208  window [2] (Q1.py — GASOLVER)
-    0       41    1231  fileWatcher [2]
-    0      303    1232  extensionHost [2]
-    0       33    1233       electron-nodejs (/private/var/folders/yf/4k07bgld22x8gr963ccp2kh40000gq/T/AppTranslocation/079B612B-0DF6-4130-A64F-629190F3F62F/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) --ms-enable-electron-run-as-node /private/var/folders/yf/4k07bgld22x8gr963ccp2kh40000gq/T/AppTranslocation/079B612B-0DF6-4130-A64F-629190F3F62F/d/Visual Studio Code.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=1232)
-    0      156    1270       electron-nodejs (/private/var/folders/yf/4k07bgld22x8gr963ccp2kh40000gq/T/AppTranslocation/079B612B-0DF6-4130-A64F-629190F3F62F/d/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin) --ms-enable-electron-run-as-node /Users/mtii/.vscode/extensions/ms-python.vscode-pylance-2024.3.2/dist/server.bundle.js --cancellationReceive=file:13be5a7ee198e2a41eca717ffa9e5a1cb6ff9c73e4 --node-ipc --clientProcessId=1232)
-
-Workspace Stats: 
-|  Window (Q1.py — GASOLVER)
-|    Folder (GASOLVER): 11 files
-|      File types: json(3) DS_Store(2) txt(2) gitignore(1) py(1)
-|      Conf files: project.json(1)
+    0      145   10556  code main
+    0      106    4556  fileWatcher [1]
+    0       34    7544     crashpad-handler
+    0      150   12216  shared-process
+    0      170   16996     gpu-process
+    0      314   17752  window [1] (app2.py - MAD_1_proj - Visual Studio Code)
+    0      249   18360  extensionHost [1]
+    0      179    4904       "C:\Users\krish\AppData\Local\Programs\Microsoft VS Code\Code.exe" c:\Users\krish\.vscode\extensions\streetsidesoftware.code-spell-checker-4.0.34\packages\_server\dist\main.cjs --node-ipc --clientProcessId=18360
+    0      236    4992       electron-nodejs (bundle.js )
+    0      115   19460  ptyHost
+    0        8   13728       conpty-agent
+    0       68   17620       C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command "try { . \"c:\Users\krish\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1\" } catch {}"
+    0       69   18544       C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command "try { . \"c:\Users\krish\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1\" } catch {}"
+    0        6   21264         C:\WINDOWS\system32\cmd.exe /c ""C:\Users\krish\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd" -s"   
+    0      105   17896           electron-nodejs (cli.js )
+    1      133   19720             "C:\Users\krish\AppData\Local\Programs\Microsoft VS Code\Code.exe" -s
+    0       90    9524               utility-network-service
+    0      121   23892               gpu-process
+    0       84   24184               crashpad-handler
+    0        8   22152       conpty-agent
+    0       50   23532     utility-network-service
 """
